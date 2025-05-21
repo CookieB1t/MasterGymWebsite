@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Контакти | MasterGym</title>
+  <link rel="stylesheet" href="mastergym_styles.css"/>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+  <div class="header-left">
+    <img src="mastergym-icon.png" alt="MasterGym Icon" class="logo" />
+    <span class="brand">MasterGym</span>
+  </div>
+
+  <input id="menu-toggle" type="checkbox" />
+  <label class="menu-button-container" for="menu-toggle">
+    <div class="menu-button"></div>
+  </label>
+
+  <nav class="nav-links menu">
+    <a href="MasterGymHTML.html">Головна</a>
+    <a href="MasterGymAboutHTML.html">Про нас</a>
+    <a href="MasterGymSubscriptionsHTML.html">Абонементи</a>
+    <a href="MasterGymContactsHTML.html">Контакти</a>
+  </nav>
+</header>
+
+  <!-- Контент -->
+	<div class="contacts-title">
+		<h2 class="subtitle">Є запитання?</h2>
+		<h1 class="main-title">Зв'яжіться з нами або надішліть повідомлення!</h1>
+	</div>
+  
+  <main class="contact-main">
+  <div class="contact-form">
+    <form action="#" method="post">
+  <fieldset>
+    <legend>Особиста інформація</legend>
+    <div class="name-surname">
+      <div class="form-group">
+        <label for="first-name">Ім'я</label>
+        <input type="text" id="first-name" name="first-name" required>
+      </div>
+      <div class="form-group">
+        <label for="last-name">Прізвище</label>
+        <input type="text" id="last-name" name="last-name" required>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Електронна пошта</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <legend>Повідомлення</legend>
+    <div class="form-group">
+      <textarea id="message" name="message" rows="10" required></textarea>
+    </div>
+  </fieldset>
+
+  <button type="submit">Надіслати</button>
+</form>
+
+  </div>
+
+  <div class="contact-info">
+    <p>Адреса:</p>
+	<p>вул. Прикладна, 10</p>
+    <p>м. Львів, Україна</p>
+    <p>Телефон: +38 (097) 000-00-00</p>
+    <p>Email: info@mastergym.ua</p>
+	<p>Графік роботи:</p>
+    <p>Пн-Пт, 7:00 — 22:00</p>
+	<p>Сб-Нд, 8:00 — 20:00</p>
+  </div>
+</main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <p>MasterGym</p>
+      <div class="social-icons">
+        <a href="#"><img src="facebook-icon.png" alt="Facebook" /></a>
+        <a href="#"><img src="instagram-icon.png" alt="Instagram" /></a>
+        <a href="#"><img src="youtube-icon.png" alt="YouTube" /></a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

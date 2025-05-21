@@ -1,0 +1,440 @@
+/* =========================
+   Базові стилі
+   ========================= */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+html, body {
+  height: 100%;
+}
+/* =========================
+   Хедер
+   ========================= */
+.subscriptions-header {
+  background-color: #fff;
+  text-align: center;
+  padding: 20px;
+  font-size: 36px;
+  margin: 0;
+}
+/* =========================
+   Секція карток
+   ========================= */
+.subscriptions-cards {
+  position: relative;
+  overflow: hidden;
+  flex: 1;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  padding: 40px 20px;
+  color: #fff;
+  text-align: center;
+}
+
+.background-video {
+ position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.content {
+  position: relative;
+  z-index: 1; /* картки та кнопки над відео */
+}
+
+
+.subscriptions-cards > *:not(.background-video) {
+  position: relative;
+  z-index: 1;
+}
+/* =========================
+   Кнопки місяць/рік
+   ========================= */
+.toggle {
+  margin-bottom: 60px;
+}
+
+.toggle button {
+  margin: 0 10px;
+  padding: 12px 28px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.toggle button.active,
+.toggle button:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #000;
+}
+
+/* =========================
+   Картки
+   ========================= */
+.cards-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.90);
+  color: #000;
+  width: 350px;
+  aspect-ratio: 1 / 1;
+  padding: 25px 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card h2 {
+  font-size: 32px;
+}
+
+.card .price {
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.card .price span {
+  font-size: 16px;
+  color: #fff;
+}
+
+.card.basic .price span {
+  font-size: 16px;
+  color: #000;
+}
+
+.card ul {
+  padding: 0;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  text-align: left;
+}
+
+.card ul li {
+  margin-bottom: 8px;
+}
+
+.subscribe {
+  background-color: #222;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.card.premium {
+  background-color: rgba(163, 0, 0, 0.90);
+  color: #fff;
+}
+
+.card.premium .subscribe {
+  background-color: #fff;
+  color: #222;
+}
+
+.card.standard {
+  background-color: rgba(25, 25, 25, 0.95);
+  color: #fff;
+}
+
+.card.standard .subscribe {
+  background-color: #fff;
+  color: #222;
+}
+
+.subscribe:hover {
+  background-color: #111;
+  transition: background 0.3s;
+}
+
+.card.standard .subscribe:hover {
+  background-color: #ccc;
+  transition: background 0.3s;
+}
+
+.card.premium .subscribe:hover {
+  background-color: #ccc;
+  transition: background 0.3s;
+}
+
+/*	Нереалізовані сторінки
+.standard-block {
+  background-image: url('Standard.png');
+  flex: 1;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  padding: 40px 20px;
+  color: #fff;
+  text-align: center;
+}
+	
+.basic-block {
+  background-image: url('Basic.png');
+  flex: 1;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  padding: 40px 20px;
+  color: #fff;
+  text-align: center;
+}
+
+.premium-block {
+  background-image: url('Premium.png');
+  flex: 1;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  padding: 40px 20px;
+  color: #fff;
+  text-align: center;
+}
+
+.basic-description {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.90);
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  color: #333;
+}
+
+.basic-description p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.basic-purchase-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 2px solid #ccc;
+}
+
+.basic-purchase-block .basic-price {
+  font-size: 28px;
+  color: #000;
+  font-weight: bold;
+}
+
+.basic-purchase-block .basic-price span {
+  font-size: 18px;
+  color: #555;
+  margin-left: 4px;
+}
+
+.basic-btt {
+  padding: 12px 24px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.basic-btt:hover {
+  background-color: #333;
+}
+
+.standard-description {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: rgba(25, 25, 25, 0.95);
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  color: #fff;
+}
+
+.standard-description p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.standard-purchase-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 2px solid #ccc;
+}
+
+.standard-purchase-block .standard-price {
+  font-size: 28px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.standard-purchase-block .standard-price span {
+  font-size: 18px;
+  color: #ddd;
+  margin-left: 4px;
+}
+
+.standard-btt {
+  padding: 12px 24px;
+  background-color: #fff;
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.standard-btt:hover {
+  background-color: #ccc;
+}
+
+.premium-description {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: rgba(163, 0, 0, 0.90);
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  color: #fff;
+}
+
+.premium-description p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.premium-purchase-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 2px solid #ccc;
+}
+
+.premium-purchase-block .premium-price {
+  font-size: 28px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.premium-purchase-block .premium-price span {
+  font-size: 18px;
+  color: #ddd;
+  margin-left: 4px;
+}
+
+.premium-btt {
+  padding: 12px 24px;
+  background-color: #fff;
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.premium-btt:hover {
+  background-color: #ccc;
+}
+*/
+
+
+/* =========================
+   Медіа
+   ========================= */
+@media (max-width: 1024px) {
+  .cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0px;
+  padding: 0;
+  margin: 0;
+}
+
+  .card {
+  flex: 1 1 100%;              
+  margin: 0;
+  border-radius: 0;
+  box-shadow: none;
+  aspect-ratio: auto;
+  height: auto;
+  padding: 25px 20px;
+  box-sizing: border-box;
+}
+
+  .card h2 {
+    font-size: 28px;
+  }
+
+  .card .price {
+    font-size: 40px;
+  }
+
+  .card ul {
+	list-style-position: inside;
+    font-size: 16px;
+    margin-left: 0px;
+	text-align: center;
+  }
+
+  .subscribe {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+  }
+  
+  .subscriptions-cards {
+	  padding: 40px 0px;
+	  padding-bottom: 0px;
+  }
+}

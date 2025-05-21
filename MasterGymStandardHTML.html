@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Про нас | MasterGym</title>
+  <link rel="stylesheet" href="mastergym_styles.css"/>
+   <link rel="stylesheet" href="subscriptions_styles.css"/>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="header-left">
+      <img src="mastergym-icon.png" alt="MasterGym Icon" class="logo" />
+      <span class="brand">MasterGym</span>
+    </div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <nav class="nav-links" id="navLinks">
+      <a href="MasterGymHTML.html">Головна</a>
+      <a href="MasterGymAboutHTML.html">Про нас</a>
+      <div class="dropdown">
+        <a href="MasterGymSubscriptionsHTML.html">Абонементи ▾</a>
+        <div class="dropdown-content">
+          <a href="MasterGymBasicHTML.html">Базовий</a>
+          <a href="MasterGymStandardHTML.html">Стандартний</a>
+          <a href="MasterGymPremiumHTML.html">Преміальний</a>
+        </div>
+      </div>
+      <a href="MasterGymContactsHTML.html">Контакти</a>
+    </nav>
+  </header>
+  <!-- Main Content -->
+  <main>
+    <!-- Заголовок -->
+    <section class="subscriptions-header">
+      <h1>Стандартний</h1>
+    </section>
+
+    <!-- Секція з фоном і картками -->
+    <section class="standard-block">
+      <div class="standard-description">
+		<p>
+			Стандартний абонемент підходить тим, хто прагне урізноманітнити свої тренування та отримати більше мотивації та підтримки в досягненні цілей. Окрім усього, що входить до базового пакету (тренажерний зал, кардіо-зона, електронний ключ), ви отримаєте доступ до групових занять з професійними тренерами.
+		</p>
+		<p>
+			У нашому клубі проводяться заняття з фітнесу, функціонального тренінгу, йоги, пілатесу та танців. Групові тренування — це чудовий спосіб зарядитися енергією, познайомитися з іншими учасниками та отримати підтримку від тренера. Крім того, до абонементу включено консультацію тренера, який допоможе вам скласти індивідуальну програму занять.
+		</p>
+
+		<div class="standard-purchase-block">
+			<p class="standard-price">$50<span>/міс</span></p>
+			<button class="standard-btt">Підписатися</button>
+		</div>
+	  </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <p>MasterGym</p>
+      <div class="social-icons">
+        <a href="#"><img src="facebook-icon.png" alt="Facebook" /></a>
+        <a href="#"><img src="instagram-icon.png" alt="Instagram" /></a>
+        <a href="#"><img src="youtube-icon.png" alt="YouTube" /></a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("active");
+    }
+  </script>
+</body>
+</html>

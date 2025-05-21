@@ -1,0 +1,491 @@
+/* =========================
+   Базові стилі
+   ========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #fff;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+}
+
+/* =========================
+   Хедер
+   ========================= */
+header {
+  background-color: #a30000;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 30px;
+  flex-wrap: wrap;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  padding: 17px 0px;
+}
+
+.logo {
+  height: 30px;
+  margin-right: 10px;
+}
+
+.brand {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links a {
+  display: block;
+  padding: 20px 20px;
+  background-color: transparent;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  background-color: #800000;
+}
+
+/* =========================
+   Бургер
+   ========================= */
+
+.menu-toggle {
+  padding: 13px 13px;
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.menu-button-container {
+  display: none;
+  height: 50px;
+  width: 40px;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+  display: block;
+  background-color: #fff;
+  position: absolute;
+  height: 4px;
+  width: 30px;
+  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  border-radius: 2px;
+}
+
+.menu-button::before {
+  content: '';
+  margin-top: -8px;
+}
+
+.menu-button::after {
+  content: '';
+  margin-top: 8px;
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button {
+  background-color: transparent;
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::before {
+  margin-top: 0px;
+  transform: rotate(45deg);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::after {
+  margin-top: 0px;
+  transform: rotate(-45deg);
+}
+
+/* =========================
+   Головна сторінка
+   ========================= */
+.intro h1 {
+  font-size: 48px;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  padding: 0px 40px;
+}
+
+.main-image {
+  width: 100%;
+  max-height: 400px;
+  display: block;
+  object-fit: cover;
+  object-position: center top;
+  margin-bottom: 30px;
+}
+
+.services {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  max-width: 800px;
+  margin: 0 auto 20px;
+  text-align: left;
+  padding: 0 40px;
+  font-size: 18px;
+}
+
+.services ul {
+  list-style: none;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  padding-left: 0;
+}
+
+.services li {
+  margin-bottom: 10px;
+  font-size: inherit;
+}
+
+/* =========================
+   Сторінка Про нас
+   ========================= */
+.about-container {
+  display: flex;
+  flex: 1 0 auto;
+  flex-wrap: wrap;
+  min-height: 100vh;
+  align-items: stretch;
+  background-color: #fff;
+}
+
+.about-text {
+  flex: 1 1 400px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  z-index: 2;
+}
+
+.about-text h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  margin-bottom: 1em;
+}
+
+.about-image {
+  flex: 1 1 400px;
+  display: flex;
+  align-items: stretch;
+}
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+/* =========================
+   Сторінка контактів
+   ========================= */
+.contacts-title {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.contacts-title .main-title {
+  font-size: 24px;
+  color: #000;
+  margin-top: 10px;
+}
+
+.contacts-title .subtitle {
+  font-size: 24px;
+  color: #000;
+  margin: 0;
+}
+
+.contact-main {
+  display: flex;
+  flex-direction:row;
+  justify-content: center; 
+  align-items: center;
+  gap: 40px;
+  padding: 40px;
+  flex-wrap: wrap;
+}
+
+.contact-form {
+  width: 100%;
+  max-width: 650px; 
+}
+
+.name-surname {
+  display: flex;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  flex: 1;
+}
+
+.form-group label {
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 10px;
+  border: 1px solid #999;
+  border-radius: 8px;
+  font-size: 16px;
+  width: 100%;
+}
+
+button[type="submit"] {
+  padding: 12px 20px;
+  background-color: #111;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%; 
+}
+
+button[type="submit"]:hover {
+  background-color: #444;
+}
+
+.contact-info {
+  width: 100%;
+  max-width: 500px; 
+  text-align: center;
+  background-color: #111;
+  color: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Lab 6 start*/
+form fieldset {
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+form legend {
+  font-weight: bold;
+  font-size: 18px;
+  padding: 0 10px;
+  color: #111;
+}
+/* Lab 6 end*/
+
+/* =========================
+   Футер
+   ========================= */
+footer {
+  background-color: #000;
+  color: white;
+  padding: 10px 40px;
+}
+
+footer .footer-content {
+  display: inline-block;
+  text-align: center;
+}
+
+footer .footer-content p {
+  font-size: 20px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+footer .social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+footer .social-icons img {
+  width: 32px;
+  height: 32px;
+}
+
+/* =========================
+   Медіа
+   ========================= */
+@media (max-width: 768px) {
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #a30000;
+    position: absolute;
+    top: 66px;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out;
+  }
+
+  .nav-links a {
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+    border-top: 1px solid #800000;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  #menu-toggle:checked ~ .menu {
+	max-height: 500px;
+  }
+
+  .menu-button-container {
+    display: flex;
+    z-index: 1001;
+  }
+
+  .intro h1 {
+    font-size: 32px;
+  }
+
+  .subtitle {
+    font-size: 18px;
+  }
+
+  .services {
+    font-size: 16px;
+  }
+
+   /* Lab 5 start*/
+  .about-container {
+    flex-direction: column;
+    background-image: url('About.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+	background-attachment: fixed; /* Lab 5*/
+  }
+   /* Lab 5 end*/
+   
+  .about-image {
+    display: none;
+  }
+
+  .about-text {
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 15px;
+    margin: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .about-text h1 {
+    font-size: 32px;
+  }
+	  
+  .footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: left;
+    gap: 15px;
+  }
+
+  .footer-content p {
+    text-align: center;
+  }
+
+  footer .social-icons {
+    justify-content: flex-start;
+  }
+  
+}
+
+@media (max-width: 1024px) {
+  .about-container {
+	flex-direction: row;
+	flex-wrap: nowrap;
+  }
+}
+
+@media (max-width: 1285px) {
+  .contact-main {
+	display: flex;
+	flex-direction: column; 
+	align-items: center;
+	gap: 40px;
+	padding: 40px;
+  }
+  
+  .contact-form {
+    order: 2;
+  }
+
+  .contact-info {
+    order: 1;
+  }
+}
