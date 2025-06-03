@@ -373,6 +373,9 @@ footer .social-icons img {
    Медіа
    ========================= */
 @media (max-width: 768px) {
+  .contact-info{
+	  font-size:18px;
+	}
   .nav-links {
     display: flex;
     flex-direction: column;
