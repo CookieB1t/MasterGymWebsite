@@ -363,15 +363,26 @@ footer {
 }
 
 footer .footer-content {
-  display: inline-block;
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 10px;
 }
 
-footer .footer-content p {
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-left p {
   font-size: 20px;
   margin-bottom: 5px;
   font-weight: bold;
 }
+
 
 footer .social-icons {
   display: flex;
@@ -382,6 +393,50 @@ footer .social-icons {
 footer .social-icons img {
   width: 32px;
   height: 32px;
+}
+
+.footer-links-wrapper {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.aboutus-links,
+.subscriptions-links {
+  min-width: 150px;
+}
+
+.aboutus-links h4,
+.subscriptions-links h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.aboutus-links ul,
+.subscriptions-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.aboutus-links li,
+.subscriptions-links li {
+  margin-bottom: 6px;
+}
+
+.aboutus-links a,
+.subscriptions-links a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.aboutus-links a:hover,
+.subscriptions-links a:hover {
+  text-decoration: underline;
 }
 
 /* =========================

@@ -42,6 +42,7 @@ html, body {
   padding: 40px 20px;
   color: #fff;
   text-align: center;
+  min-height:600px
 }
 
 .background-video {
