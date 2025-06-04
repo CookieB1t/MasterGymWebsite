@@ -240,7 +240,7 @@ header {
 }
 
 .contacts-title .main-title {
-  font-size: 24px;
+  font-size: 36px;
   color: #000;
   margin-top: 10px;
 }
@@ -323,6 +323,11 @@ button[type="submit"]:hover {
   line-height: 1.6;
 }
 
+.contact-info a {
+  text-decoration: none;
+  color: #fff;
+}
+
 /* Lab 6 start*/
 form fieldset {
   border: 2px solid #ccc;
@@ -338,6 +343,15 @@ form legend {
   color: #111;
 }
 /* Lab 6 end*/
+
+.contact-map {
+  width: 100%;
+  max-width: 900px;
+  margin: 40px auto 0 auto;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
 
 /* =========================
    Футер

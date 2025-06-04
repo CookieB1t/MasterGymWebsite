@@ -150,6 +150,7 @@ html, body {
   border-radius: 8px;
   font-weight: bold;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .card.premium {
@@ -187,7 +188,6 @@ html, body {
   transition: background 0.3s;
 }
 
-/*	Нереалізовані сторінки
 .standard-block {
   background-image: url('Standard.png');
   flex: 1;
@@ -385,7 +385,7 @@ html, body {
 .premium-btt:hover {
   background-color: #ccc;
 }
-*/
+
 
 
 /* =========================
